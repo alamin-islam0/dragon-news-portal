@@ -10,7 +10,7 @@ const NewsCard = ({ news }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm mb-6">
       {/* Author Info and Actions */}
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-between p-4 bg-base-200">
         <div className="flex items-center gap-3">
           <img
             src={news?.author?.img || "https://placehold.co/40x40"}
@@ -63,7 +63,7 @@ const NewsCard = ({ news }) => {
       </div>
 
       {/* News Content */}
-      <div className="p-4 pt-0">
+      <div className="p-4 pt-4">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">{news?.title}</h2>
         <img
           src={news?.image_url}
