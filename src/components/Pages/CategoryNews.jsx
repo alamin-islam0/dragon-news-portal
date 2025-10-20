@@ -31,7 +31,10 @@ const CategoryNews = () => {
             <h2 className='font-bold mb-4'>Total <span className='text-secondary'>{CategoryNews.length}</span> news Found</h2>
             <div className='grid grid-cols-1 gap-5'>
                 {
-                    CategoryNews.map(news => <NewsCard></NewsCard>)
+                    CategoryNews.map(news => <NewsCard 
+                        news = {news}
+                        key={news.id}>
+                        </NewsCard>)
                 }
             </div>
         </div>
