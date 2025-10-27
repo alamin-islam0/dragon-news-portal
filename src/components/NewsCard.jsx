@@ -1,4 +1,6 @@
+import { id } from "date-fns/locale";
 import React from "react";
+import { Link } from "react-router";
 
 const formatDate = (dateString) => {
   if (!dateString) return "";
@@ -82,9 +84,9 @@ const NewsCard = ({ news }) => {
         </p>
 
         {/* Read More Link */}
-        <div className="text-[#FF8C47] hover:underline cursor-pointer">
+        <Link to={`/news-details/${news.id}`} className="text-[#FF8C47] hover:underline cursor-pointer">
           Read More
-        </div>
+        </Link>
 
         {/* Rating and Views */}
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
