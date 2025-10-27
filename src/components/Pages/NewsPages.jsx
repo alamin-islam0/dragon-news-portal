@@ -16,13 +16,15 @@ const NewsPages = () => {
     }, [data, id]);
     return (
         <div>
-            <header className='py-3'>
+            <header className='py-3 '>
                 <Header></Header>
-                <NavBar></NavBar>
+                <nav className='w-11/12 mx-auto my-4 f'>
+                    <NavBar></NavBar>
+                </nav>
             </header>
             <main className='w-11/12 mx-auto grid grid-cols-12 gap-8'>
                 <section className='col-span-9'>
-                    <h2 className='font-bold mb-5'>News Details</h2>
+                    <h2 className='font-bold text-2xl mb-5'>News Details</h2>
                     <NewsDetailsCard news={news}></NewsDetailsCard>
                 </section>
                 <aside className='col-span-3'>
